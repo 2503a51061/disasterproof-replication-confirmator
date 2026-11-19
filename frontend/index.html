@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DisasterProof Replication Confirmator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="brand">
+            <span class="brand-icon">☁</span>
+            <div>
+                <h1>DisasterProof</h1>
+                <p>Replication Confirmator</p>
+            </div>
+        </div>
+        <span class="system-status">● SYSTEM ONLINE</span>
+    </header>
+
+    <main class="container">
+
+        <section class="welcome">
+            <p class="eyebrow">CLOUD DISASTER RECOVERY</p>
+            <h2>Replication Monitoring Dashboard</h2>
+            <p>Monitor and test cross-region backup operations.</p>
+        </section>
+
+        <section class="bucket-grid">
+
+            <div class="bucket-card">
+                <span class="card-label">PRIMARY STORAGE</span>
+                <div class="bucket-icon">☁</div>
+                <h3>Source Bucket</h3>
+                <p>disasterproof-src-2026</p>
+                <span class="tag">SOURCE</span>
+            </div>
+
+            <div class="bucket-card">
+                <span class="card-label">BACKUP STORAGE</span>
+                <div class="bucket-icon">☁</div>
+                <h3>Destination Bucket</h3>
+                <p>disasterproof-destination-2026</p>
+                <span class="tag backup">BACKUP</span>
+            </div>
+
+        </section>
+
+        <section class="monitor-card">
+
+            <h3>Replication Control Center</h3>
+            <p class="muted">Run a test to check the backup replication process.</p>
+
+            <div class="led-area">
+                <div id="led" class="led"></div>
+                <h2 id="status">READY</h2>
+                <p id="message">Waiting for test initiation</p>
+            </div>
+
+            <button id="testButton" onclick="testReplication()">
+                ▶ TEST REPLICATION
+            </button>
+
+     <p class="note">Live backup verification powered by AWS Lambda and Amazon S3.</p>
+
+        </section>
+
+        <section class="stats-grid">
+
+            <div class="stat-card">
+                <p>Total Tests</p>
+                <h2 id="totalTests">0</h2>
+            </div>
+
+            <div class="stat-card">
+                <p>Successful</p>
+                <h2 id="successCount">0</h2>
+            </div>
+
+            <div class="stat-card">
+                <p>Failed</p>
+                <h2 id="failedCount">0</h2>
+            </div>
+
+        </section>
+
+        <section class="history-card">
+            <h3>Replication Activity</h3>
+            <div id="history">
+                <p class="muted">No replication tests performed yet.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>DisasterProof Replication Confirmator | B.Tech Cloud Computing Project</p>
+        <p>Powered by AWS IoT Core, API Gateway, AWS Lambda and Amazon S3</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
